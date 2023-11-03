@@ -10,7 +10,7 @@ public class Ejercicio01 {
 		int hora;
 		int min;
 		int sec;
-		int i;
+		int n;
 		
 		System.out.print("Hora: ");
 		hora = sc.nextInt();
@@ -19,9 +19,9 @@ public class Ejercicio01 {
 		System.out.print("Segundos: ");
 		sec = sc.nextInt();
 		System.out.print("Segundos a incrementar: ");
-		i = sc.nextInt();
+		n = sc.nextInt();
 		
-		for (int n=0; n<i; n++) {
+		for (int i=1; i<n; i++) {
 			sec++;
 			if (sec>=59) {
 				sec = 00;

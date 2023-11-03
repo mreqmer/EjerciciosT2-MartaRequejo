@@ -5,45 +5,39 @@ import java.util.Scanner;
 public class Prueba {
 
 	public static void main(String[] args) {
+		// Variables
 		Scanner sc = new Scanner(System.in);
+		int hora;
+		int min;
+		int sec;
 		int n;
-		int unidad = 0, decena = 0, centena = 0, mil=0;
-		//Pedir datos al usuario
-		System.out.print("Introduce un número comprendido entre 0 y 9999: ");
-		n = sc.nextInt(); 
-		if (n>0 && n<10){
-			System.out.println("Es capicúa");
-		}else if (n>9 && n<100) {
-			unidad = n%10;
-			decena = n/10;
-			if(unidad == decena) {
-				System.out.println("Es capicúa");
-			}else {
-				System.out.println("No es capicúa");
+		
+		System.out.print("Hora: ");
+		hora = sc.nextInt();
+		System.out.print("Minutos: ");
+		min = sc.nextInt();
+		System.out.print("Segundos: ");
+		sec = sc.nextInt();
+		System.out.print("Segundos a incrementar: ");
+		n = sc.nextInt();
+		
+		for (int i=1; i<n; i++) {
+			sec++;
+			if (sec>=59) {
+				sec = 00;
+				min += 1;
+				if(min>=60) {
+					min = 00;
+					hora += 1;
+					if(hora>=24) {
+						hora = 00;
+					}
+				}
+			
 			}
-		}else if (n>99 && n<1000) {
-			unidad = n%10;
-			centena = n/100;
-			if(unidad == centena) {
-				System.out.println("Es capicúa");
-			}else {
-				System.out.println("No es capicúa");
-			}
-		}else if (n>999 && n<=9999) {
-			unidad = n%10;
-			decena = (n/10)%10;
-			centena = (n/100)%10;
-			mil = n/1000;
-			if(unidad == mil && decena == centena) {
-				System.out.println("Es capicúa");
-			}else {
-				System.out.println("No es capicúa");
-			}
-				
-		}else {
-			System.err.print("Error.");
 		}
-
+			
+		System.out.println(hora + ":" + min + ":" + sec);
 		sc.close();
 	}
 
