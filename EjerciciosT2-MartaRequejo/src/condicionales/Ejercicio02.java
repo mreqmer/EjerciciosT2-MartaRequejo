@@ -6,15 +6,14 @@ public class Ejercicio02 {
 
 	public static void main(String[] args) {
 		//Programa que te asigna una letra a tu número de DNI
-		//Comprueba si el número es capicúa o no
-				/*
-				 * ENTRADA: -1 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
-				 * ENTRADA: 999999999 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
-				 * ENTRADA: 2 | RES. ESPERADO: Le corresponde la letra W. | RES. OBTENIDO: Le corresponde la letra W.
-				 * ENTRADA: 58366112 | RES. ESPERADO: Le corresponde la letra R. | RES. OBTENIDO: Le corresponde la letra R.
-				 * ENTRADA: 28408548 | RES. ESPERADO: Le corresponde la letra Y. | RES. OBTENIDO: Le corresponde la letra Y.
-				 * 
-				 */
+	    /*
+		 * ENTRADA: -1 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
+		 * ENTRADA: 999999999 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
+		 * ENTRADA: 2 | RES. ESPERADO: Le corresponde la letra W. | RES. OBTENIDO: Le corresponde la letra W.
+		 * ENTRADA: 58366112 | RES. ESPERADO: Le corresponde la letra R. | RES. OBTENIDO: Le corresponde la letra R.
+		 * ENTRADA: 28408548 | RES. ESPERADO: Le corresponde la letra Y. | RES. OBTENIDO: Le corresponde la letra Y.
+		 * 
+		 */
 		
 		Scanner sc = new Scanner(System.in);//Scanner
 		//constante 
@@ -81,7 +80,7 @@ public class Ejercicio02 {
 			}//fin switch
 			//Devuelve el resultado de la letra del DNI	
 			System.out.println("Le corresponde la letra " + letra + ".");
-		//Mensaje de error	
+		//Mensaje de err	
 		}else {
 			System.out.println("Error");
 		}
