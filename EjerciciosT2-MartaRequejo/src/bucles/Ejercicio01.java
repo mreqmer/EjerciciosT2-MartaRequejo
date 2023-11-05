@@ -12,18 +12,20 @@ public class Ejercicio01 {
 		int sec;
 		int n;
 		
-		System.out.print("Hora: ");
-		hora = sc.nextInt();
-		System.out.print("Minutos: ");
-		min = sc.nextInt();
-		System.out.print("Segundos: ");
-		sec = sc.nextInt();
-		System.out.print("Segundos a incrementar: ");
-		n = sc.nextInt();
+		do {
+			System.out.print("Hora: ");
+			hora = sc.nextInt();
+			System.out.print("Minutos: ");
+			min = sc.nextInt();
+			System.out.print("Segundos: ");
+			sec = sc.nextInt();
+			System.out.print("Segundos a incrementar: ");
+			n = sc.nextInt();
+		}while((hora<0 || hora>23)||(min<0 || min>59)||(sec<0 || sec>59)||(n<0));
 		
-		for (int i=1; i<n; i++) {
+		for (int i=0; i<n; i++) {
 			sec++;
-			if (sec>=59) {
+			if (sec>=60) {
 				sec = 00;
 				min += 1;
 				if(min>=60) {

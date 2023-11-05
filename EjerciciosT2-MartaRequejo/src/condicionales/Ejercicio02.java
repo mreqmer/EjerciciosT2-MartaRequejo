@@ -80,7 +80,7 @@ public class Ejercicio02 {
 			}//fin switch
 			//Devuelve el resultado de la letra del DNI	
 			System.out.println("Le corresponde la letra " + letra + ".");
-		//Mensaje de err	
+		//Mensaje de error
 		}else {
 			System.out.println("Error");
 		}

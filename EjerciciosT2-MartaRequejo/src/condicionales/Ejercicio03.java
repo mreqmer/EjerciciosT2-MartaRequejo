@@ -6,10 +6,11 @@ public class Ejercicio03 {
 		/*
 		 * ENTRADA: 2   2   0  | RES. ESPERADO: A cada animal le corresponden 1.0kg de comida. | RES. OBTENIDO: A cada animal le corresponden 1.0kg de comida.
 		 * ENTRADA: 0   2   4  | RES. ESPERADO: No hay suficiente comida comprada. | RES. OBTENIDO: No hay suficiente comida comprada.
-		 * ENTRADA: 5 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
-		 * ENTRADA: 25 | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
-		 * 
-		 * 
+		 * ENTRADA: 10  3   6  | RES. ESPERADO: A cada animal le corresponden 1.3333333333333333kg de comida. | RES. OBTENIDO: A cada animal le corresponden 1.3333333333333333kg de comida.
+		 * ENTRADA: 12  0   3  | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
+		 * ENTRADA: 4   2   4  | RES. ESPERADO: No queda comida restante. | RES. OBTENIDO: No queda comida restante.
+		 * ENTRADA: 8   5  -3  | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
+		 * ENTRADA: -3  6   2  | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
 		 */
 		
 		// Variables

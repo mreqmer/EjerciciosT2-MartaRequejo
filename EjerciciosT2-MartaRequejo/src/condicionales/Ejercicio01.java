@@ -14,7 +14,7 @@ public class Ejercicio01 {
 		 * ENTRADA: 22 | RES. ESPERADO: Es capicúa | RES. OBTENIDO:Es capicúa
 		 * ENTRADA: 122 | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
 		 * ENTRADA: 212 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
-		 * 
+		 * ENTRADA: 9119 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
 		 */
 		
 		//Variables
