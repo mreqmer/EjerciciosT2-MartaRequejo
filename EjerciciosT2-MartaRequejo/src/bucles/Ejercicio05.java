@@ -14,13 +14,15 @@ public class Ejercicio05 {
 			a = sc.nextInt();
 			System.out.print("Introduce el segundo número: ");
 			b = sc.nextInt();
+			
 			}while (a<0 || b<0);
-		
+		sc.close();
 		if(a>b) {
 			mayor=a;
 		}else {
 			mayor=b;
 		}
+		
 		
 		
 		for ( mcm=mayor; mcm>=1;mcm++) {
@@ -32,7 +34,7 @@ public class Ejercicio05 {
 		
 		System.out.println(mcm);
 		
-		sc.close();
+		
 		}
 		
 	}
