@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Ejercicio01 {
 
 	public static void main(String[] args) {
-		//suma x segundos a una hora dada
 		/*
 		 * ENTRADA: Hora: 25 Minutos: 12 Segundos: 00 Segundos a incrementar: 2| RES. ESPERADO: ERROR. Valores incorrectos | RES. OBTENIDO: ERROR. Valores incorrectos
 		 * ENTRADA: Hora: 22 Minutos: 68 Segundos: 00 Segundos a incrementar: 3| RES. ESPERADO: ERROR. Valores incorrectos | RES. OBTENIDO: ERROR. Valores incorrectos

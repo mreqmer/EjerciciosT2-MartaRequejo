@@ -5,20 +5,18 @@ import java.util.Scanner;
 public class ejercicio04 {
 
 	public static void main(String[] args) {
-		//calculadora de mcd
 		/*
 		 * ENTRADA: 5   -2  | RES. ESPERADO: Error. Introduce números positivos. | RES. OBTENIDO: Error. Introduce números positivos.
 		 * ENTRADA: -5   2  | RES. ESPERADO: Error. Introduce números positivos. | RES. OBTENIDO: Error. Introduce números positivos.
-		 * ENTRADA: 15  28  | RES. ESPERADO: 1 | RES. OBTENIDO: 1
-		 * ENTRADA: 25  30  | RES. ESPERADO: 5 | RES. OBTENIDO: 5
-		 * ENTRADA: 20  40  | RES. ESPERADO: 20 | RES. OBTENIDO: 20
+		 * ENTRADA: 15  28  | RES. ESPERADO: El mcd es: 1 | RES. OBTENIDO: El mcd es: 1
+		 * ENTRADA: 25  30  | RES. ESPERADO: El mcd es: 5 | El mcd es: 5
+		 * ENTRADA: 20  40  | RES. ESPERADO: El mcd es: 20 | RES. OBTENIDO: El mcd es: 20
 		 */
 		
 		//variables
 		Scanner sc = new Scanner(System.in);
 		//guarda el primer número, el segundo y cual es el menor de los dos
 		int a, b, menor;
-		int i;
 		//pide los datos al usuario	
 		System.out.print("Introduce el primer número: ");
 		a = sc.nextInt();
@@ -34,15 +32,12 @@ public class ejercicio04 {
 			}else {
 				menor=a;
 			}
-			//va buscando de forma decreciente desde el menor cual es el primer número que divide a ambos simultáneamente, cuando lo encuentra se sale
-			for (i=menor; i>=2;i--) {
-				if(a%i==0 && b%i==0) {
-					break;
-				}
+			//si los números introducidos no son divisibles disminuye el valor de menor
+			while(a%menor!=0 || b%menor!=0) {
+				menor--;
 			}
-			
 			//devuelve el mcd
-			System.out.println(i);
+			System.out.println("El mcd es: " + menor);
 		//mensaje de error	
 		}else
 			System.out.println("Error. Introduce números positivos.");

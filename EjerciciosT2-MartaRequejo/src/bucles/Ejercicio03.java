@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Ejercicio03 {
 
 	public static void main(String[] args) {
-		//Dibuja triangulos
 		/*
 		 * 
 		 * ENTRADA: 0 | RES. ESPERADO: Error. Número no válido | RES. OBTENIDO: Error. Número no válido
@@ -14,11 +13,11 @@ public class Ejercicio03 {
 		 *      		               * *                  * *
 		 *      
 		 *  ENTRADA: 3 | RES. ESPERADO:  *   | RES. OBTENIDO: *
-		 *      		                * *                  * *
+		 *                              * *                  * *
 		 *                             * * *                * * *
 		 *                             
-		 *  ENTRADA: 3 | RES. ESPERADO:  *   | RES. OBTENIDO: *
-		 *      		                * *                  * *
+		 *  ENTRADA: 4 | RES. ESPERADO:  *   | RES. OBTENIDO: *
+		 *                              * *                  * *
 		 *                             * * *                * * *
 		 *                            * * * *              * * * *
 		 */
@@ -42,7 +41,6 @@ public class Ejercicio03 {
 				 * la siguiente linea de asteriscos tendrá 1 más
 				 * el número de espacios antes de poner los asteriscos se vuelve a igualar a i-1
 				 */
-				System.out.println(" ");
 				asterisco=0;
 				contAst++;
 				espacio=i-1;
@@ -56,6 +54,7 @@ public class Ejercicio03 {
 					System.out.print("* ");
 					asterisco++;
 				}
+				System.out.println(" ");
 			}
 		}else
 			System.out.println("Error. Número no válido");
