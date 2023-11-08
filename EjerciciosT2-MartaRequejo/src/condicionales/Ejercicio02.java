@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Ejercicio02 {
 
 	public static void main(String[] args) {
-		//Programa que te asigna una letra a tu número de DNI
 	    /*
 		 * ENTRADA: -1 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
 		 * ENTRADA: 999999999 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
@@ -25,7 +24,7 @@ public class Ejercicio02 {
 		
 		//Pedir DNI al usuario
 		System.out.print("Introduce el DNI para asignarle una letra: ");
-		dni = sc.nextInt();//escaner
+		dni = sc.nextInt();
 		//if que comprueba el rango válido de un número de DNI
 		if (dni>0 && dni <= 99999999) {
 			//Calcula un número el cual tiene asignado en el switch case una letra
@@ -77,7 +76,7 @@ public class Ejercicio02 {
 						letra = "K";
 					case 22 ->
 						letra = "E";
-			}//fin switch
+			}
 			//Devuelve el resultado de la letra del DNI	
 			System.out.println("Le corresponde la letra " + letra + ".");
 		//Mensaje de error

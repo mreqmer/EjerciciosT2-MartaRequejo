@@ -2,7 +2,6 @@ package condicionales;
 import java.util.Scanner;
 public class Ejercicio08 {
 	public static void main(String[] args) {
-		//calcula el precio del viaje de un cliente
 		
 		/*
 		 * ENTRADA: Tiempo de estancia: 0 Km recorridos: 5 | RES. ESPERADO: Su precio es de: 12.5€ | RES. OBTENIDO: Su precio es de: 12.5€

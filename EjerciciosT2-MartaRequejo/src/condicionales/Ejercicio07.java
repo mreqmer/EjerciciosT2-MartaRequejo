@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Ejercicio07 {
 	public static void main(String[] args) {
-		//Suma 1 segundo a una hora dada
 		/*
 		 * ENTRADA: Hora: 25 Minutos: 12 Segundos: 00 | RES. ESPERADO: ERROR. Hora incorrecta. | RES. OBTENIDO: ERROR. Hora incorrecta.
 		 * ENTRADA: Hora: 22 Minutos: 68 Segundos: 00 | RES. ESPERADO: ERROR. Hora incorrecta. | RES. OBTENIDO: ERROR. Hora incorrecta.

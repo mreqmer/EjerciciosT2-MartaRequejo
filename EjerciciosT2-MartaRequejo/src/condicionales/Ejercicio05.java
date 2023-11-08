@@ -2,7 +2,6 @@ package condicionales;
 import java.util.Scanner;
 public class Ejercicio05 {
 	public static void main(String[] args) {
-		//Calcula valor absoluto
 		/*
 		 * ENTRADA: -5 | RES. ESPERADO: |-5| = 5 . | RES. OBTENIDO: |-5| = 5
 		 * ENTRADA: 30 | RES. ESPERADO: |30| = 30 | RES. OBTENIDO: |30| = 30

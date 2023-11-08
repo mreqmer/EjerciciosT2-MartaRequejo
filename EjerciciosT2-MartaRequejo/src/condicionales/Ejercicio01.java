@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class Ejercicio01 {
 
 	public static void main(String[] args) {
-		//Comprueba si el número es capicúa o no
 		/*
-		 * ENTRADA: -5 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
+		 * ENTRADA: -5    | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
 		 * ENTRADA: 50000 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
-		 * ENTRADA: 5 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
-		 * ENTRADA: 25 | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
-		 * ENTRADA: 22 | RES. ESPERADO: Es capicúa | RES. OBTENIDO:Es capicúa
-		 * ENTRADA: 122 | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
-		 * ENTRADA: 212 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
-		 * ENTRADA: 9119 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
+		 * ENTRADA: 5     | RES. ESPERADO: Es capicúa    | RES. OBTENIDO: Es capicúa
+		 * ENTRADA: 25    | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
+		 * ENTRADA: 22    | RES. ESPERADO: Es capicúa    | RES. OBTENIDO:Es capicúa
+		 * ENTRADA: 122   | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
+		 * ENTRADA: 212   | RES. ESPERADO: Es capicúa    | RES. OBTENIDO: Es capicúa
+		 * ENTRADA: 9119  | RES. ESPERADO: Es capicúa    | RES. OBTENIDO: Es capicúa
 		 */
 		
 		//Variables
@@ -24,8 +23,8 @@ public class Ejercicio01 {
 		int unidad = 0, decena = 0, centena = 0, mil=0;
 		//Pedir datos al usuario
 		System.out.print("Introduce un número comprendido entre 0 y 9999: ");
-		n = sc.nextInt(); //escaner
-		//números de1 dígito son capicúa
+		n = sc.nextInt();
+		//si el número tiene 1 dígito siempre es capicúa
 		if (n>0 && n<10){
 			System.out.println("Es capicúa");
 		//comprobación de números 2 dígitos, los cuales son capicúa si sus dígitos son iguales	
@@ -49,7 +48,7 @@ public class Ejercicio01 {
 				System.out.println("No es capicúa");
 			}//fin del if
 		//Comprueba los números de 4 dígitos, los cuales son capicúa solo si los mil y unidades son iguales y las
-		//Decenas y centenas iuales	
+		//decenas y centenas iuales	
 		}else if (n>999 && n<=9999) {
 			unidad = n%10;
 			decena = (n/10)%10;

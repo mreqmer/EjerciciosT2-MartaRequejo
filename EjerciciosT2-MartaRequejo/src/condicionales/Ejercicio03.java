@@ -18,6 +18,7 @@ public class Ejercicio03 {
 		//guardan (en ese orden) la comida comprada, la comida, la restante y las raciones de cada animal
 		double comprado, comido, restante = 0, racion = 0;
 		int  animales;//numero de animales 
+		//pide los datos al usuario
 		System.out.print("Introduce la cantidad de comida comprada en kg: ");
 		comprado = sc.nextDouble();//recoge la comida comprada
 		System.out.print("Introduce el número de animales:");
@@ -36,13 +37,14 @@ public class Ejercicio03 {
 				//calcula las raciones de cada animal y lo devuelve a la consola
 				racion =(double) restante / animales;
 				System.out.println("A cada animal le corresponden " + racion + "kg de comida.");
-			}else {//si no queda lo muestra
+			//mensaje si no queda comida	
+			}else {
 				System.out.println("No queda comida restante.");
-			}//fin if	
+			}
 		//error si no se cumplen las condiciones
 		}else {
 			System.err.println("Error.");
-		}//fin if principal
+		}
 		sc.close();
 	}
 

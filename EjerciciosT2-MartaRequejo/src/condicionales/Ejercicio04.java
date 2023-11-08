@@ -2,23 +2,24 @@ package condicionales;
 import java.util.Scanner;
 public class Ejercicio04 {
 	public static void main(String[] args) {
-		//Pide un número del 1-99 y lo devuelve en formato texto.
 		/*
-		 * ENTRADA: -5 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
-		 * ENTRADA: 100 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
-		 * ENTRADA: 5 | RES. ESPERADO: cinco | RES. OBTENIDO: cinco
-		 * ENTRADA: 10 | RES. ESPERADO: diez | RES. OBTENIDO: diez
-		 * ENTRADA: 12 | RES. ESPERADO: doce | RES. OBTENIDO: doce
-		 * ENTRADA: 18 | RES. ESPERADO: dieciocho | RES. OBTENIDO: dieciocho
-		 * ENTRADA: 21 | RES. ESPERADO: veintiuno | RES. OBTENIDO: veintiuno
-		 * ENTRADA: 33 | RES. ESPERADO: treinta y tres | RES. OBTENIDO: treinta y tres
-		 * ENTRADA: 50 | RES. ESPERADO: cincuenta | RES. OBTENIDO: cincuenta
+		 * ENTRADA: 1  | RES. ESPERADO: uno             | RES. OBTENIDO: uno
+		 * ENTRADA: 9  | RES. ESPERADO: nueve           | RES. OBTENIDO: nueve
+		 * ENTRADA: 12 | RES. ESPERADO: doce            | RES. OBTENIDO: doce
+		 * ENTRADA: 16 | RES. ESPERADO: dieciseis       | RES. OBTENIDO: dieciseis
+		 * ENTRADA: 21 | RES. ESPERADO: veintiuno       | RES. OBTENIDO: veintiuno
+		 * ENTRADA: 35 | RES. ESPERADO: treinta y cinco | RES. OBTENIDO: treinta y cinco
+		 * ENTRADA: 50 | RES. ESPERADO: cincuenta       | RES. OBTENIDO: cincuenta
+		 * ENTRADA: 99 | RES. ESPERADO: noventa y nueve | RES. OBTENIDO: noventa y nueve
+		 * ENTRADA: -5 | RES. ESPERADO: Error.          | RES. OBTENIDO: Error.
 		 */
 		// Variables
 		Scanner sc = new Scanner(System.in);
 		int n; //recoge el número del usuario
-		String unidades = "", nCadena;//recoge las unidades del número en texto y las añade si precisa a nCadena donde se guarda el número introducido escrito en String
-		int ultimoN, primerN; //se guardan el primer y último dígito del número introducido
+		//recoge las unidades del número en texto y las añade si precisa a nCadena donde se guarda el número introducido escrito en String
+		String unidades = "", nCadena;
+		//se guardan el primer y último dígito del número introducido
+		int ultimoN, primerN; 
 		
 		//pedir datos por consola
 		System.out.print("Introduce un número entre 1 y 99: ");
@@ -26,7 +27,7 @@ public class Ejercicio04 {
 		
 		//comprueba que el número esté dentro del rango, sino error
 		if(n>0 && n<100) {
-			
+			//calculo del primer y último dígito
 			ultimoN=n%10;
 			primerN=n/10;
 			
@@ -50,8 +51,8 @@ public class Ejercicio04 {
 				unidades = "ocho";
 				case 9 ->
 				unidades = "nueve";
-			}//fin
-			//Se mira que cadena de texto se le asigna al número para formarlo por escrito
+			}
+			//convierte las decenas en texto y le añade las unidades en texto si precisa
 			nCadena = switch(primerN) {
 				case 1 ->
 					//excepciones del 10
@@ -108,11 +109,11 @@ public class Ejercicio04 {
 			};
 			//mensaje de resultado al usuario
 			System.out.println(nCadena);
-		//mensaje de error
+		//mensaje de error si es mayor de 99 o menor de 0
 		}else
 			System.err.println("Error.");
-		
-		sc.close();//cierre escaner
+		//cierre escaner
+		sc.close();
 	}
 	
 }

@@ -8,25 +8,26 @@ public class Ejercicio02 {
 		// Variables
 		Scanner sc = new Scanner(System.in);
 		int num;//número que introduce el usuario
-		boolean primo = true;
-		
-		System.out.print("Introduce un número para saber si es primo: ");
+		boolean primo;
+		int j;
+		int cont=0;
+		System.out.print("Introduce un número para saber cuantos son primos: ");
 		num = sc.nextInt();
-		if(num>0) {
-		for (int n=2; n<num; n++) {
-			if (num%n==0) {
-			primo = false;
-			break;
+		for (int i=2; i<=num; i++) {
+			primo = true;
+			j=2;
+			while (j<=i-1 && primo == true) {
+				if(i%j==0) {
+					primo=false;
+				}
+				j++;	
 			}
-		}
 			if (primo) {
-				System.out.println("Es primo.");
-			}else{
-				System.out.println("No es primo.");
+				cont++;
 			}
-		}else {
-			System.out.println("Valor no válido.");
 		}
+		System.out.println("Entre 1 y " + num + " hay " + cont + " primos.");
+		
 		
 		sc.close();
 	}

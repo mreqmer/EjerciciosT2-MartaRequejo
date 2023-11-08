@@ -5,8 +5,16 @@ import java.util.Scanner;
 public class Ejercicio10 {
 
 	public static void main(String[] args) {
-		//El programa comprueba si un número comprendido entre 0 y 9999 es capicúa o no, por ejemplo
-		//1221 si lo invertimos es 1221, por tanto es capicúa. Tanbién lo son los números de 1 dígito
+		/*
+		 * ENTRADA: -5 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
+		 * ENTRADA: 50000 | RES. ESPERADO: Error. | RES. OBTENIDO: Error.
+		 * ENTRADA: 5 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
+		 * ENTRADA: 25 | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
+		 * ENTRADA: 22 | RES. ESPERADO: Es capicúa | RES. OBTENIDO:Es capicúa
+		 * ENTRADA: 122 | RES. ESPERADO: No es capicúa | RES. OBTENIDO: No es capicúa
+		 * ENTRADA: 212 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
+		 * ENTRADA: 9119 | RES. ESPERADO: Es capicúa | RES. OBTENIDO: Es capicúa
+		 */
 		// Variables
 		Scanner sc = new Scanner(System.in);
 		int n1;//Recoge el número introducido por el usuario
@@ -14,7 +22,7 @@ public class Ejercicio10 {
 		//Pedir datos al usuario
 		System.out.print("Introduce un número: ");
 		n1 = sc.nextInt(); 
-		//condicional para ver si el número está comprendido entre 0 y 9999, sino mensaje de error
+		//comprueba si el número está comprendido entre 0 y 9999, sino mensaje de error
 		if (n1>=0) {
 			//copia n1 en copia
 			copia = n1;
@@ -32,12 +40,13 @@ public class Ejercicio10 {
 				System.out.println(n1 + " es capicúa.");
 			}else {
 			System.out.println(n1 + " no es capicúa");
-			}//fin de la comprobación del capicúa
-		}else {//mensaje de error
+			}
+		//mensaje de error	
+		}else {
 			System.err.println("ERROR.");
 			System.out.println("Introdude un número mayor de 0.");
-		}//fin del if
-		sc.close();
+		}
+		sc.close();//cierre de escaner
 	}
 
 }

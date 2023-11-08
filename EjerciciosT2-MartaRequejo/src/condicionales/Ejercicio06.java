@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Ejercicio06 {
 	
 	public static void main(String[] args) {
-		//Genera dos numeros aleatorios y pide al usuario que los sume, luego le dice si es o no correcto
 		
 		/*
 		 *EJEMPLO: 36 + 98 = | ENTRADA: 5  | RES. ESPERADO: Incorrecto.  | RES. OBTENIDO: Incorrecto.
@@ -21,7 +20,7 @@ public class Ejercicio06 {
 		int r2 = rand.nextInt(1,100);//segundo número random
 		//pide la suma del usuario
 		System.out.print("Suma estos números: \n" + r1 + " + " + r2 + " = ");
-		sumaUsuario = sc.nextInt();//escaner
+		sumaUsuario = sc.nextInt();
 		//suma real de los dos números random
 		suma = r1+ r2;
 		//comprueba si es correcto o no lo es
