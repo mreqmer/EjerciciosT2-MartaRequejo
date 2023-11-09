@@ -19,7 +19,7 @@ public class Ejercicio09 {
 		int cont=0;
 
 		//pide un número al usuario
-		System.out.print("Introduce un número: ");
+		System.out.print("Introduce un número positivo: ");
 		n = sc.nextInt(); 
 		//va diividiendo en un bucle /10 hasta que llega a 0 y cuenta las iteraciones
 		while(n!=0){

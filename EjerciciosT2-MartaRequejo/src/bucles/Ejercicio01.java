@@ -1,5 +1,6 @@
 package bucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio01 {
@@ -18,43 +19,67 @@ public class Ejercicio01 {
 		// Variables
 		Scanner sc = new Scanner(System.in);
 		//Guarda la hora, los minutos y los segundos
-		int hora, min, sec;
+		int hora= -1, min=-1, sec=-1;
 		//Guarda los segundos a incrementar
-		int n;
+		int n = -1;
 		//Pedir datos para escanearlos
-		System.out.print("Hora: ");
-		hora = sc.nextInt();
-		System.out.print("Minutos: ");
-		min = sc.nextInt();
-		System.out.print("Segundos: ");
-		sec = sc.nextInt();
-		System.out.print("Segundos a incrementar: ");
-		n = sc.nextInt();
-		//comprueba si los números están en un rango correcto
-		if((hora>=0 && hora<=23)&&(min>=0 && min<=59)&&(sec>=0 && sec<=59)&&(n>=0)){
-			//bucle para incrementar los segundos, min y horas
-			for (int i=0; i<n; i++) {
-				sec++;
-				if (sec>=60) {
-					sec = 00;
-					min += 1;
-					if(min>=60) {
-						min = 00;
-						hora += 1;
-						if(hora>=24) {
-							hora = 00;
-						}
-					}
-				
-				}
+		do {
+			try {
+				System.out.print("Hora, valor entre [0-23] : ");
+				hora = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error de horas, introduce un valor numérico entre [0-23]");
+				sc.nextLine();
 			}
-		//Una vez hecho el calculo devuelve la hora sumada	
-		System.out.println(hora + ":" + min + ":" + sec);
-		//Si no está en rango mensaje de error
-		}else
-			System.out.println("ERROR. Valores incorrectos.");
-			
+		}while (hora<0 || hora > 23);	
 		
+		do {
+			try {
+				System.out.print("Minutos, valor entre [0-59] : ");
+				min = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error de minutos, introduce un valor numérico entre [0-59]");
+				sc.nextLine();
+			}
+		}while (min<0 || min > 59);
+		
+		do {
+			try {
+				System.out.print("Segundos, valor entre [0-59] : ");
+				sec = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error de segundos, introduce un valor numérico entre [0-59]");
+				sc.nextLine();
+			}
+		}while (sec<0 || sec > 59);
+		
+		do {
+			try {
+				System.out.print("Segundos a incrementar (valor positivo): ");
+				n = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error, introduce un número positivo.");
+				sc.nextLine();
+			}
+		}while (n<0);
+		
+			//bucle para incrementar los segundos, min y horas
+		for (int i=0; i<n; i++) {
+			sec++;
+			if (sec>=60) {
+				sec = 00;
+				min += 1;
+				if(min>=60) {
+					min = 00;
+					hora += 1;
+					if(hora>=24) {
+						hora = 00;
+					}//if hora
+				}//if min
+			}//if sec
+		}//for
+		//Una vez hecho el calculo devuelve la hora sumada	
+		System.out.println(hora + ":" + min + ":" + sec);	
 		sc.close();
 	}
 

@@ -1,5 +1,6 @@
 package bucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ejercicio04 {
@@ -16,16 +17,25 @@ public class ejercicio04 {
 		//variables
 		Scanner sc = new Scanner(System.in);
 		//guarda el primer número, el segundo y cual es el menor de los dos
-		int a, b, menor;
+		int a=-1, b=-1, menor;
 		//pide los datos al usuario	
-		System.out.print("Introduce el primer número: ");
-		a = sc.nextInt();
+		do {
+			try {
+				System.out.print("Introduce el primer número: ");
+				a = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error. Introduce un número positivo.");	
+			}
+		}while(a<1);
+		
+		do {
 		System.out.print("Introduce el segundo número: ");
 		b = sc.nextInt();
+		}while(b<1);
 		
 		sc.close();//cierre de escaner
 		//comprueba si los números pedidos están en rango, sino error
-		if(a>0 && b>0) {
+		
 			//comprueba que número es menor
 			if(a>b) {
 				menor=b;
@@ -38,9 +48,6 @@ public class ejercicio04 {
 			}
 			//devuelve el mcd
 			System.out.println("El mcd es: " + menor);
-		//mensaje de error	
-		}else
-			System.out.println("Error. Introduce números positivos.");
 		
 	}
 
