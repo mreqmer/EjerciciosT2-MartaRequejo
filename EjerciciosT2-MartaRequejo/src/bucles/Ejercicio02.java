@@ -35,15 +35,19 @@ public class Ejercicio02 {
 			}	
 		}while(num<1);
 		
+		//buce que aumenta desde 2 hasta el número introducido y hace reset de j y primo
 		for (int i=2; i<=num; i++) {
 			primo = true;
 			j=2;
+			//va incrementando j (el divisor) para ver si encuentra un número por el cual sea divisible
 			while (j<=i-1 && primo == true) {
+				//si es divissible primo = false
 				if(i%j==0) {
 					primo=false;
 				}
 				j++;	
 			}
+			//si primo = true aumenta el número de números que son primos
 			if (primo) {
 				cont++;
 			}

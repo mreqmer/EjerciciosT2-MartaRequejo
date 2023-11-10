@@ -31,24 +31,19 @@ public class Ejercicio03 {
 		int asterisco, contAst=0;
 		//espacios de cada linea
 		int espacio;
-				//recoge el número de lineas dentro de un valor positivo.
-				do {
-					try {
-						System.out.print("Introduce un número:");;
-						num = sc.nextInt();
-					}catch(InputMismatchException e) {
-						System.out.println("Error. Introduce un número positivo.");
-						sc.nextLine();
-					}
-				}while (num<1);	
+			//recoge el número de lineas dentro de un valor positivo y comprueba que sea válido
+		do {
+			try {
+				System.out.print("Introduce un número positivo: ");;
+				num = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error. Introduce un número positivo.");
+				sc.nextLine();
+			}
+		}while (num<1);	
 	
+		//va sumando las lineas hasta llegar a la linea introducida por el usuario
 		for (int i=num; i>0; i--) {
-			/*cada vez que se ejecuta el bucle:
-			 * un retorno de carro
-			 * asterisco vuelve a 0
-			 * la siguiente linea de asteriscos tendrá 1 más
-			 * el número de espacios antes de poner los asteriscos se vuelve a igualar a i-1
-			 */
 			asterisco=0;
 			contAst++;
 			espacio=i-1;

@@ -7,10 +7,11 @@ public class Ejercicio01 {
 
 	public static void main(String[] args) {
 		/*
-		 * ENTRADA: Hora: 25 Minutos: 12 Segundos: 00 Segundos a incrementar: 2| RES. ESPERADO: ERROR. Valores incorrectos | RES. OBTENIDO: ERROR. Valores incorrectos
-		 * ENTRADA: Hora: 22 Minutos: 68 Segundos: 00 Segundos a incrementar: 3| RES. ESPERADO: ERROR. Valores incorrectos | RES. OBTENIDO: ERROR. Valores incorrectos
-		 * ENTRADA: Hora: 21 Minutos: 12 Segundos: 69 Segundos a incrementar: 4| RES. ESPERADO: ERROR. Valores incorrectos | RES. OBTENIDO: ERROR. Valores incorrectos
-		 * ENTRADA: Hora: 21 Minutos: 12 Segundos: 40 Segundos a incrementar:-1 | RES. ESPERADO: ERROR. Valores incorrectos | RES. OBTENIDO: ERROR. Valores incorrectos
+		 * ENTRADA: Hora: 25 Minutos: 12 Segundos: 00 Segundos a incrementar: 2 | RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar
+		 * ENTRADA: Hora: 22 Minutos: 68 Segundos: 00 Segundos a incrementar: 3 | RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar
+		 * ENTRADA: Hora: 21 Minutos: 12 Segundos: 69 Segundos a incrementar: 4 | RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar
+		 * ENTRADA: Hora: 21 Minutos: 12 Segundos: 40 Segundos a incrementar:-1 | RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar
+		 * ENTRADA: Hora: 21 Minutos: 12 Segundos: 40 Segundos a incrementar: k | RES. ESPERADO: Error. Introduce un valor numérico positivo | RES. OBTENIDO: Error. Introduce un valor numérico positivo
 		 * ENTRADA: Hora: 20 Minutos: 58 Segundos: 20 Segundos a incrementar:20 | RES. ESPERADO: 20:58:40 | RES. OBTENIDO: 20:58:40 
 		 * ENTRADA: Hora: 13 Minutos: 50 Segundos: 40 Segundos a incrementar:80 | RES. ESPERADO: 13:52:00 | RES. OBTENIDO: 13:52:00
 		 * ENTRADA: Hora: 13 Minutos: 59 Segundos: 35 Segundos a incrementar:150| RES. ESPERADO: 14:02:05 | RES. OBTENIDO:14:02:05
@@ -22,13 +23,13 @@ public class Ejercicio01 {
 		int hora= -1, min=-1, sec=-1;
 		//Guarda los segundos a incrementar
 		int n = -1;
-		//Pedir datos para escanearlos
+		//Pedir datos para escanearlos y comprueba datos válidos
 		do {
 			try {
 				System.out.print("Hora, valor entre [0-23] : ");
 				hora = sc.nextInt();
 			}catch(InputMismatchException e) {
-				System.out.println("Error de horas, introduce un valor numérico entre [0-23]");
+				System.out.println("Error. introduce un valor numérico entre [0-23]");
 				sc.nextLine();
 			}
 		}while (hora<0 || hora > 23);	
