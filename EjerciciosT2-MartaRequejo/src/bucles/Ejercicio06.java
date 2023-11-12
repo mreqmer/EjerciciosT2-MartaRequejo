@@ -28,7 +28,7 @@ public class Ejercicio06 {
 		//número de lineas del triángulo
 		int n=-1;
 		//es el número que se mostrará en cada linea y cuantas veces se repite
-		int numero=0, contNum=1;
+		int contNum=1;
 		//pide datos por consola y comprueba que sea válido
 		do {
 			try{
@@ -41,8 +41,8 @@ public class Ejercicio06 {
 		}while(n<1 || n>20);
 		
 		//cuenta los números de lineas hasta llegar de tope al introducido por el usuario
-		for (int i=1; i<=n; i++) {
-			numero++;
+		for (int numero=1; numero<=n; numero++) {
+			
 			//numero que se muestra y las veces que se repite
 			for (contNum=1; contNum <= numero; contNum++) {
 				System.out.print(numero);
