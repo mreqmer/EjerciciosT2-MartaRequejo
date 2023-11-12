@@ -36,7 +36,7 @@ public class Ejercicio01 {
 				System.out.println("Es capicúa");
 			}else {
 				System.out.println("No es capicúa");
-			}//fin del if
+			}
 		//Comprueba los números de 3 dígitos, los cuales son capicúa solo si las unidades y centenas son iguales	
 		}else if (n>99 && n<1000) {
 			unidad = n%10;
@@ -46,7 +46,7 @@ public class Ejercicio01 {
 				System.out.println("Es capicúa");
 			}else {
 				System.out.println("No es capicúa");
-			}//fin del if
+			}
 		//Comprueba los números de 4 dígitos, los cuales son capicúa solo si los mil y unidades son iguales y las
 		//decenas y centenas iuales	
 		}else if (n>999 && n<=9999) {
@@ -59,8 +59,8 @@ public class Ejercicio01 {
 				System.out.println("Es capicúa");
 			}else {
 				System.out.println("No es capicúa");
-			}//fin if
-		//si esta fuera de rango 1-99 error		
+			}
+		//si esta fuera de rango 1-9999 error		
 		}else {
 			System.err.print("Error.");
 		}

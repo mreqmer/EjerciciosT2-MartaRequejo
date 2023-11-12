@@ -29,7 +29,7 @@ public class Ejercicio01 {
 				System.out.print("Hora, valor entre [0-23] : ");
 				hora = sc.nextInt();
 			}catch(InputMismatchException e) {
-				System.out.println("Error. introduce un valor numérico entre [0-23]");
+				System.out.println("Error de horas. introduce un valor numérico entre [0-23]");
 				sc.nextLine();
 			}
 		}while (hora<0 || hora > 23);	
@@ -59,7 +59,7 @@ public class Ejercicio01 {
 				System.out.print("Segundos a incrementar (valor positivo): ");
 				n = sc.nextInt();
 			}catch(InputMismatchException e) {
-				System.out.println("Error, introduce un número positivo.");
+				System.out.println("Error, introduce un valor número positivo.");
 				sc.nextLine();
 			}
 		}while (n<0);

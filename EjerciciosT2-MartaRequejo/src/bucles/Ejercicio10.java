@@ -23,14 +23,13 @@ public class Ejercicio10 {
 		//Pedir datos al usuario y comprueba si es válido
 		do {
 			try {
-				System.out.print("Introduce un número: ");
+				System.out.print("Introduce un número positivo: ");
 				n1 = sc.nextInt();
 			}catch(InputMismatchException e) {
 				System.out.println("Error. Introduce un número positivo.");
 				sc.nextLine();
 			}
 		}while(n1<1);
-		//comprueba si el número está comprendido entre 0 y 9999, sino mensaje de error
 		
 		//copia n1 en copia
 		copia = n1;

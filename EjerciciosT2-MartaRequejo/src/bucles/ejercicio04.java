@@ -7,8 +7,8 @@ public class ejercicio04 {
 
 	public static void main(String[] args) {
 		/*
-		 * ENTRADA: 5   -2  | RES. ESPERADO: vuelve a preguntar  | RES. OBTENIDO: Error. Introduce números positivos.
-		 * ENTRADA: -5   2  | RES. ESPERADO: vuelve a preguntar  | RES. OBTENIDO: Error. Introduce números positivos.
+		 * ENTRADA: 5   -2  | RES. ESPERADO: vuelve a preguntar  | RES. OBTENIDO: vuelve a preguntar
+		 * ENTRADA: -5   2  | RES. ESPERADO: vuelve a preguntar  | RES. OBTENIDO: vuelve a preguntar
 		 * ENTRADA: 15  28  | RES. ESPERADO: El mcd es: 1 | RES. OBTENIDO: El mcd es: 1
 		 * ENTRADA: 25  30  | RES. ESPERADO: El mcd es: 5 | El mcd es: 5
 		 * ENTRADA: 20  40  | RES. ESPERADO: El mcd es: 20 | RES. OBTENIDO: El mcd es: 20
@@ -41,22 +41,19 @@ public class ejercicio04 {
 			}
 		}while(b<1);
 		
+		//comprueba que número es menor
+		if(a>b) {
+			menor=b;
+		}else {
+			menor=a;
+		}
+		//si los números introducidos no son divisibles disminuye el valor de menor
+		while(a%menor!=0 || b%menor!=0) {
+			menor--;
+		}
+		//devuelve el mcd
+		System.out.println("El mcd es: " + menor);
 		sc.close();//cierre de escaner
-		//comprueba si los números pedidos están en rango, sino error
-		
-			//comprueba que número es menor
-			if(a>b) {
-				menor=b;
-			}else {
-				menor=a;
-			}
-			//si los números introducidos no son divisibles disminuye el valor de menor
-			while(a%menor!=0 || b%menor!=0) {
-				menor--;
-			}
-			//devuelve el mcd
-			System.out.println("El mcd es: " + menor);
-		
 	}
 
 }

@@ -10,7 +10,7 @@ public class Ejercicio09 {
 		/*
 		* ENTRADA: -4520 | RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar
 		* ENTRADA: -21   | RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar
-		* ENTRADA: q     | RES. ESPERADO: vuelta de bucle | RES. OBTENIDO: vuelta de bucle		
+		* ENTRADA: q     | RES. ESPERADO: Error. Introduce un número positivo | RES. OBTENIDO: Error. Introduce un número positivo
 		* ENTRADA: 120   | RES. ESPERADO: El número tiene 3 dígitos.| RES. OBTENIDO: El número tiene 3 dígitos.
 		* ENTRADA: 2     | RES. ESPERADO: El número tiene 1 dígito. | RES. OBTENIDO: El número tiene 1 dígito.
 		*/

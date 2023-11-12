@@ -9,7 +9,7 @@ public class Ejercicio06 {
 		/*
 		 * 
 		 * ENTRADA: 0 | RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar 
-		 * ENTRADA: -5| RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: Error. Número no válido
+		 * ENTRADA: -5| RES. ESPERADO: vuelve a preguntar | RES. OBTENIDO: vuelve a preguntar
 		 * ENTRADA: q | RES. ESPERADO: Error. Introduce un número entre 1 y 20. | RES. OBTENIDO: Error. Introduce un número entre 1 y 20.
 		 * ENTRADA: 2 | RES. ESPERADO: 1   | RES. OBTENIDO: 1
 		 *      		               22                   22
@@ -43,17 +43,12 @@ public class Ejercicio06 {
 		//cuenta los números de lineas hasta llegar de tope al introducido por el usuario
 		for (int i=1; i<=n; i++) {
 			numero++;
-			contNum=1;
 			//numero que se muestra y las veces que se repite
-			while(contNum<=numero) {
+			for (contNum=1; contNum <= numero; contNum++) {
 				System.out.print(numero);
-				contNum++;
 			}
-			
 			System.out.println("");
 		}
-			
-		
 		sc.close();//cierre de escaner
 	}
 
